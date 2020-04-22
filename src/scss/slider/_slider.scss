@@ -1,0 +1,22 @@
+.slider {
+	// Styling the slider for take all height and width of the window
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	margin: 0 auto;
+	overflow: hidden;
+	background-color: $color-1;
+
+	&__component {
+		height: 100vh;
+		display: flex;
+	}
+
+	&__slide {
+		height: 100vh;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
