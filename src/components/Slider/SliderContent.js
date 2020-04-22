@@ -13,7 +13,13 @@ const SliderContent = (props) => {
 		width: `${widthValue}px`
 	};
 
-	return <div className="slider__component" style={style} />;
+	const { children } = props;
+
+	return (
+		<div className="slider__component" style={style}>
+			{children}
+		</div>
+	);
 };
 
 export default SliderContent;
