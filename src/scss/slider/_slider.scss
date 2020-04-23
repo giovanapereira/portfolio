@@ -19,4 +19,64 @@
 		background-repeat: no-repeat;
 		background-position: center;
 	}
+
+	&__arrow {
+		display: flex;
+		position: absolute;
+		top: 50%;
+		height: 50px;
+		width: 50px;
+		justify-content: center;
+		background: $color-2;
+		border-radius: 50%;
+		cursor: pointer;
+		align-items: center;
+		transition: opacity ease-in 0.1s;
+		opacity: .8;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		svg {
+			color: $white;
+			font-size: 27px;
+		}
+	}
+
+	.right {
+		right: 10px;
+	}
+
+	.left {
+		left: 10px;
+	}
+
+	&__dots {
+		position: absolute;
+		bottom: 25px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__dot {
+		padding: 5px;
+		margin-right: 5px;
+		cursor: pointer;
+		border-radius: 50%;
+		background: $white;
+		transition: opacity ease-in 0.1s;
+		opacity: .8;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.active {
+		background: $color-2;
+		opacity: 1;
+	}
 }
