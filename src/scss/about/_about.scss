@@ -1,0 +1,25 @@
+@import '../global/mixins/title';
+
+.about {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	text-align: center;
+
+	&__title {
+		@extend .title;
+	}
+
+	&__list {
+		margin-top: 40px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0;
+		list-style: none;
+
+		&--item {
+			padding: 0 5px;
+		}
+	}
+}

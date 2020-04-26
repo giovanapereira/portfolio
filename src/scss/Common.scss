@@ -3,7 +3,11 @@
 
 //Common elements for all pages
 @import 'common/body';
+@import 'common/container';
 @import 'common/header';
 
 //Slider component
 @import 'slider/slider';
+
+//About component
+@import 'about/about';

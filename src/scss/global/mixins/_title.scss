@@ -1,0 +1,23 @@
+.title {
+	font-size: 30px;
+	font-weight: bold;
+	color: $text-color-1;
+	position: relative;
+	display: inline-block;
+
+	&:before {
+		content: "";
+		display: block;
+		width: 73%;
+		height: 13px;
+		background-color: $color-1;
+		position: absolute;
+		left: -10px;
+		z-index: -1;
+		bottom: 3px;
+	}
+
+	svg {
+		color: $color-1;
+	}
+}
