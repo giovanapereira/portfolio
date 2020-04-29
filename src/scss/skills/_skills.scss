@@ -1,0 +1,38 @@
+@import '../global/mixins/title';
+
+.skills {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: $color-4;
+
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		@media only screen and (min-width: 768px) {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__title {
+		@extend .title;
+		color: $white;
+	}
+
+	&__right {
+		color: $white;
+
+		@media only screen and (min-width: 768px) {
+			text-align: right;
+			width: 35%;
+		}
+	}
+
+	&__left {
+		@media only screen and (min-width: 768px) {
+			width: 65%;
+		}
+	}
+}

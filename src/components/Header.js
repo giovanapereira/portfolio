@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+//Hamburguer Menu
+import Open from './Menu/Open';
+import Menu from './Menu/Menu';
+
 import logo from '../img/logo.png';
 
 function Header() {
+	// Open Hamburguer Menu
+	const [ open, setOpen ] = useState(false);
+
 	return (
 		<header className="header container">
 			<div className="header__item">
@@ -9,33 +17,8 @@ function Header() {
 			</div>
 
 			<div className="header__item">
-				<ul className="header__list">
-					<li>
-						<a className="header__link" href="#home">
-							home
-						</a>
-					</li>
-					<li>
-						<a className="header__link" href="#sobre">
-							sobre
-						</a>
-					</li>
-					<li>
-						<a className="header__link" href="#skills">
-							skills
-						</a>
-					</li>
-					<li>
-						<a className="header__link" href="#portfolio">
-							portfolio
-						</a>
-					</li>
-					<li>
-						<a className="header__link" href="#contato">
-							contato
-						</a>
-					</li>
-				</ul>
+				<Open open={open} setOpen={setOpen} />
+				<Menu open={open} setOpen={setOpen} />
 			</div>
 		</header>
 	);

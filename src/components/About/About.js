@@ -4,7 +4,7 @@ import { FiMoon } from 'react-icons/fi';
 
 function About() {
 	return (
-		<section className="about container">
+		<section className="about container" id="about">
 			<h2 className="about__title">
 				Sobre Mim <FiMoon />
 			</h2>

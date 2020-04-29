@@ -25,13 +25,13 @@ const Slider = (props) => {
 	const { activeSlide, translate, transition } = state;
 
 	const autoPlayRef = useRef();
+	const resizeRef = useRef();
 	// const transitionRef = useRef();
-	// const resizeRef = useRef();
 
 	useEffect(() => {
 		autoPlayRef.current = nextSlide;
+		resizeRef.current = handleResize;
 		// transitionRef.current = smoothTransition;
-		// resizeRef.current = handleResize;
 	});
 
 	useEffect(() => {
@@ -45,31 +45,31 @@ const Slider = (props) => {
 		// 	}
 		// };
 
-		// const resize = () => {
-		// 	resizeRef.current();
-		// };
+		const resize = () => {
+			resizeRef.current();
+		};
 
 		const interval = setInterval(play, props.autoPlay * 1000);
+		const onResize = window.addEventListener('resize', resize);
 		// const transitionEnd = window.addEventListener('transitionend', smooth);
-		// const onResize = window.addEventListener('resize', resize);
 
 		return () => {
 			clearInterval(interval);
+			window.removeEventListener('resize', onResize);
 			// window.removeEventListener('transitionend', transitionEnd);
-			// window.removeEventListener('resize', onResize);
 		};
 	}, []);
 
-	// useEffect(
-	// 	() => {
-	// 		if (transition === 0) setState({ ...state, transition: 0.45 });
-	// 	},
-	// 	[ transition ]
-	// );
+	useEffect(
+		() => {
+			if (transition === 0) setState({ ...state, transition: 0.45 });
+		},
+		[ transition ]
+	);
 
-	// const handleResize = () => {
-	// 	setState({ ...state, translate: getWidth(), transition: 0 });
-	// };
+	const handleResize = () => {
+		setState({ ...state, translate: getWidth(), transition: 0 });
+	};
 
 	// const smoothTransition = () => {
 	// 	let _slides = [];
@@ -91,11 +91,13 @@ const Slider = (props) => {
 	// 	});
 	// };
 
+	console.log(getWidth() * props.slides.length, props.slides.length, getWidth());
+
 	const nextSlide = () =>
 		setState({
 			...state,
-			translate: translate + getWidth(),
-			activeSlide: activeSlide === props.slides.length - 1 ? 0 : activeSlide + 1
+			translate: activeSlide === props.slides.length ? 0 : translate + getWidth(),
+			activeSlide: activeSlide === props.slides.length ? 0 : activeSlide + 1
 		});
 
 	const prevSlide = () =>
@@ -106,7 +108,7 @@ const Slider = (props) => {
 		});
 
 	return (
-		<div className="slider">
+		<div className="slider" id="home">
 			<SliderContent translate={translate} transition={transition} width={getWidth() * props.slides.length}>
 				{props.slides.map((slide, i) => <Slide width={getWidth()} key={slide + i} content={slide} />)}
 			</SliderContent>

@@ -4,6 +4,7 @@
 	color: $text-color-1;
 	position: relative;
 	display: inline-block;
+	z-index: 0;
 
 	&:before {
 		content: "";
@@ -19,5 +20,6 @@
 
 	svg {
 		color: $color-1;
+		transform: rotate(240deg) scale(1.1) translate(-5px, -5px);
 	}
 }

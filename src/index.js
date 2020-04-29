@@ -9,6 +9,7 @@ import './scss/Common.scss';
 import Header from './components/Header';
 import Slider from './components/Slider/Slider';
 import About from './components/About/About';
+import Skills from './components/Skills/Skills';
 
 import images from './utils/slider';
 
@@ -19,6 +20,7 @@ ReactDOM.render(
 		<Header />
 		<Slider slides={images} autoPlay={7} />
 		<About />
+		<Skills />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
