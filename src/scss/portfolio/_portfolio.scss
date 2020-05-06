@@ -1,0 +1,42 @@
+@import '../global/mixins/title';
+
+.portfolio {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	color: $text-color-1;
+
+	&__title {
+		@extend .title;
+	}
+
+	&__list {
+		margin-bottom: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+
+		&--item {
+			width: calc(100%/3);
+			min-height: 400px;
+
+			&.blue {
+				background-color: $color-1;
+				box-shadow: 0px 0px 5px 0px rgba(101, 187, 232, 0.75);
+			}
+
+			&.pink {
+				background-color: $color-2;
+				box-shadow: 0px 0px 5px 0px rgba(252, 120, 200, 0.75);
+			}
+
+			&.purple {
+				background-color: $color-3;
+				box-shadow: 0px 0px 5px 0px rgba(163, 125, 254, 0.75);
+			}
+		}
+
+		&--image {
+		}
+	}
+}

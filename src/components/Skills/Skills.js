@@ -1,4 +1,6 @@
 import React from 'react';
+import Skill from './Skill';
+
 import { FiMoon } from 'react-icons/fi';
 
 const Skills = ({ props }) => {
@@ -17,7 +19,14 @@ const Skills = ({ props }) => {
 					</p>
 				</div>
 
-				<div className="skills__left">Graphics</div>
+				<div className="skills__left">
+					<ul className="skills__list">
+						<Skill number="10" color="blue" title="Desenvolvimento" />
+						<Skill number="20" color="pink" title="Cachorro" />
+						<Skill number="30" color="purple" title="Cachorro" />
+						<Skill number="50" color="blue" title="Cachorro" />
+					</ul>
+				</div>
 			</div>
 		</div>
 	);
