@@ -1,30 +1,39 @@
 import React from 'react';
-import Item from './Item';
+import Tabs from './Tabs';
 
-import { FiMoon } from 'react-icons/fi';
-
-const Portfolio = ({ props }) => {
+const Portfolio = (props) => {
 	return (
-		<div className="portfolio" id="portfolio">
-			<div className="container">
-				<h2 className="portfolio__title">
-					Portfólio <FiMoon />
-				</h2>
+		<Tabs>
+			<Tabs.Tab label={'Tab 1'} color={'blue'} bg="http://placehold.it/200">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</Tabs.Tab>
 
-				<div className="portfolio__left">
-					<ul className="portfolio__list">
-						<Item
-							image="https://via.placeholder.com/500x500/48b6f0/FFF"
-							color="pink"
-							title="Desenvolvimento"
-						/>
-						<Item image="https://via.placeholder.com/500x500/e94fad/FFF" color="purple" title="Cachorro" />
-						<Item image="https://via.placeholder.com/500x500/6f49ca/FFF" color="blue" title="Cachorro" />
-						<Item image="https://via.placeholder.com/500x500/48b6f0/FFF" color="pink" title="Cachorro" />
-					</ul>
-				</div>
-			</div>
-		</div>
+			<Tabs.Tab label={'Tab 2'} color={'pink'} bg="http://placehold.it/200">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</Tabs.Tab>
+
+			<Tabs.Tab label={'Tab 3'} color={'purple'} bg="http://placehold.it/200">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</Tabs.Tab>
+		</Tabs>
 	);
 };
 

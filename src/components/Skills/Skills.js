@@ -5,7 +5,7 @@ import { FiMoon } from 'react-icons/fi';
 
 const Skills = ({ props }) => {
 	return (
-		<div className="skills" id="skills">
+		<section className="skills" id="skills">
 			<div className="container">
 				<div className="skills__right">
 					<h2 className="skills__title">
@@ -28,7 +28,7 @@ const Skills = ({ props }) => {
 					</ul>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 
