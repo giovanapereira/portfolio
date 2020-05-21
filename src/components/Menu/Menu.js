@@ -26,7 +26,7 @@ const Menu = ({ open, setOpen }) => {
 				</a>
 			</li>
 			<li>
-				<a className="header__link" href="#contato" onClick={() => setOpen(!open)}>
+				<a className="header__link" href="#contact" onClick={() => setOpen(!open)}>
 					contato
 				</a>
 			</li>

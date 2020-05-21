@@ -1,0 +1,17 @@
+.input {
+	transition: border .2s ease-in;
+	font-size: 14px;
+	color: $text-color-1;
+	border-radius: 4px;
+	box-shadow: none;
+	border: 1px solid $color-6;
+	height: 30px;
+	padding: 0 5px;
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: $color-3;
+		outline: transparent;
+	}
+}
